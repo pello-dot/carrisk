@@ -27,7 +27,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.title("Clasificador de riesgo al conducir un vehículo")
+
 
 
 # HTML con la imagen convertida
