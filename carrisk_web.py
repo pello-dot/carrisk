@@ -10,6 +10,12 @@ import sklearn
 
 st.set_page_config(page_title="Clasificador para predecir el riesgo al conducir un vehiculo", layout="centered")
     # Título principal centrado
+# Convertir imagen a base64
+image_base64 = load_image_as_base64("logo.png")
+# Función para cargar imágenes locales como base64
+def load_image_as_base64(file_path):
+    with open(file_path, "rb") as f:
+        return base64.b64encode(f.read()).decode()
 # HTML con la imagen convertida
 st.markdown(
     f"""
@@ -22,13 +28,6 @@ st.markdown(
 
 st.title("Clasificador de riesgo al conducir un vehículo")
 
-
-# Convertir imagen a base64
-image_base64 = load_image_as_base64("logo.png")
-# Función para cargar imágenes locales como base64
-def load_image_as_base64(file_path):
-    with open(file_path, "rb") as f:
-        return base64.b64encode(f.read()).decode()
 
 # HTML con la imagen convertida
 
