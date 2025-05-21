@@ -61,7 +61,7 @@ def main():
         # Edad como valor entero , entre 0 y 60 años)
         edad = st.sidebar.slider('Edad del conductor', min_value=18, max_value=60, value=25, step=1)  # step=1 garantiza que se seleccionen valores enteros
         # Seleccionar el tipo de vehículo
-        option = ['Familiar', 'Miniban', 'Deportivo', 'Combertible']
+        option = ['Familiar', 'Miniban', 'Deportivo', 'Convertible']
         Cartype = st.sidebar.selectbox('Escoja el tipo de vehiculo', option)
     
         data = {
@@ -99,7 +99,7 @@ def main():
     #Selección del modelo
         # Seleccionar el modelo 
     option = ['DT', 'Knn','NN']
-    model = st.sidebar.selectbox('Modelo?',option)
+    model = st.sidebar.selectbox('seleccione el modelo para realizar la prediccion',option)
 
     st.subheader('Valores seleccionados')
     st.write(df)
